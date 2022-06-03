@@ -33,3 +33,21 @@ print(simple_dict)
 my_dict = {k: v**2 for k, v in simple_dict.items() if v**2 > 5} # k= Key and V= value
 print(my_dict)
 
+simple_list = ['a','e','e','a','b','c']
+
+print(simple_list)
+duplicate = []
+
+for value in simple_list:
+    if simple_list.count(value) > 1:
+        if value not in duplicate:
+            duplicate.append(value)
+
+
+print(duplicate)
+
+## shorter way of doing this
+
+duplicate_lite = list(set([value for value in simple_list if simple_list.count(value) > 1]))
+
+print(duplicate_lite)
