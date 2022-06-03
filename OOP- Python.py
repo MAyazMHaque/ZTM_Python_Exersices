@@ -22,9 +22,10 @@ class Archer(User):
 
 
 class HybridClass(Wizard, Archer):
-    def __int__(self, name, power, arrows):
+    def __init__(self, name, power, arrows):
         Wizard.__init__(self, name, power)
         Archer.__init__(self, name, arrows)
 
 
 hb1 = HybridClass('Pappu', 100, 80)
+print(hb1.attack())

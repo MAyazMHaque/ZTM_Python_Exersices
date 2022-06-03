@@ -51,3 +51,23 @@ age = [2,3,4]
 name = ['Papu','raja','chacha']
 
 print(f'gives the combine of two iterables --> {list(zip(name,age))}')
+
+
+# Lamda Expression: these are one time anonymous function with no name, it is created on the go
+
+#lambda parameter: action(parameter)
+# can be used with map or filter or reduce (accumulator) functions
+print(my_list)
+print(list(filter(lambda item: item > 20, my_list)))
+print(list(map(lambda item: item * 3.9, my_list)))
+
+# Exersice: Usage of Lambda
+
+# list sorting with the second item in tuple
+
+a = [(2,7),(-1,2),(0,1)]
+print(a)
+a.sort() # it sorts but with first key of the tuple
+print(a)
+a.sort(key=lambda x: x[1]) # here it is sorting with respect to the second key of tuple
+print(a)
