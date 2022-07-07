@@ -52,6 +52,15 @@ name = ['Papu','raja','chacha']
 
 print(f'gives the combine of two iterables --> {list(zip(name,age))}')
 
+## Using Reduce function (applies on all the items of iterable and gives one answer only)
+from functools import reduce
+print(my_list)
+def accumulator(acc, item):
+    print (acc, item)
+    return acc + item
+
+print(reduce(accumulator, my_list,0))
+
 
 # Lamda Expression: these are one time anonymous function with no name, it is created on the go
 
